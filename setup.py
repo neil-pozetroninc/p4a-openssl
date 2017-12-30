@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="p4a-openssl",
-    version="1.0.2n",
+    version="1.0.2r1",
     author="frmdstryr",
     author_email="frmdstryr@gmail.com",
     license='MIT',
