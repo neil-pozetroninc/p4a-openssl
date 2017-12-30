@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="p4a-openssl",
-    version="1.0.2r1",
+    version="1.0.2r2",
     author="frmdstryr",
     author_email="frmdstryr@gmail.com",
     license='MIT',
@@ -22,6 +22,7 @@ setup(
     description="openssl recipes for python-for-android",
     long_description=open("README.md").read(),
     packages=find_packages(),
+    package_data={'p4a_openssl': ['*.patch']},
     include_package_data=True,
     entry_points={
         'p4a_recipe': [

@@ -7,6 +7,7 @@ import sh
 class OpenSSLRecipe(Recipe):
     version = '1.0.2n'
     url = 'https://www.openssl.org/source/openssl-{version}.tar.gz'
+    name = 'openssl'
 
     def should_build(self, arch):
         return not self.has_libs(arch, 'libssl.so',# + self.version + '.so',
@@ -54,6 +55,9 @@ class OpenSSLRecipe(Recipe):
             #: No longer required for 1.0.2n
             #self.apply_patch('disable-sover.patch', arch.arch)
             #self.apply_patch('rename-shared-lib.patch', arch.arch)
+
+            #: Patch openssl 1.0.2n
+            #self.apply_patch('drop-cpuid.patch', arch.arch)
 
             # check_ssl = partial(self.check_symbol, env, 'libssl' + self.version + '.so')
             check_crypto = partial(self.check_symbol, env, 'libcrypto.so')# + self.version + '.so')
