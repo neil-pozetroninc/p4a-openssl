@@ -46,3 +46,10 @@ enaml-native build-python
 ```
 
 Ssl support should now work within the app.
+
+
+### Donate
+
+This took me several days to implement. If this was helpful to you, 
+please consider buying me [a coffee](https://www.codelv.com/donate/) :)
+
