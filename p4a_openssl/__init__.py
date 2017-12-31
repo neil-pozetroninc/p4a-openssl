@@ -5,7 +5,7 @@ import sh
 
 
 class OpenSSLRecipe(Recipe):
-    version = '1.0.2h'
+    version = '1.0.2n'
     url = 'https://www.openssl.org/source/openssl-{version}.tar.gz'
     name = 'openssl'
 
