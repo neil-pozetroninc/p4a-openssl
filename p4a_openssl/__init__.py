@@ -50,7 +50,7 @@ class OpenSSLRecipe(Recipe):
             # so instead we manually run perl passing in Configure
             perl = sh.Command('perl')
             buildarch = self.select_build_arch(arch)
-            shprint(perl, 'Configure', 'shared', 'no-dso', 'no-krb5', 'no-ssl2', 'no-ssl3', 'no-comp', 'no-hw', buildarch, _env=env)
+            shprint(perl, 'Configure', 'shared', 'no-dso', 'no-asm', 'no-hw', buildarch, _env=env)
 
             #: No longer required for 1.0.2n
             #self.apply_patch('disable-sover.patch', arch.arch)
